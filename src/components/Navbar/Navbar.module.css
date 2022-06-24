@@ -3,7 +3,11 @@
     background-color: yellow;
 }
 
-.item {
-    color: green;
+
+.item a {
+    color: black;
 }
-  
+
+.item a.link {
+    color: green;
+} 

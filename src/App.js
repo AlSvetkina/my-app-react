@@ -12,13 +12,11 @@ import {BrowserRouter, Routes, Route} from 'react-router-dom';
 const App = () => {
   return (
     <BrowserRouter>
-    {/* необходимо это тоже указать чтобы заработало переключение между как бы страницами */}
       <div className='app-wrapper'>
         <Header />
         <Navbar />
         <div className='app-wrapper-content'>
           <Routes>
-            {/* routes работает как будто переключатель между страницами */}
             <Route path='/profile' element={<Profile/>} />
             <Route path='/dialogs' element={<Dialogs/>} />
             <Route path='/news' element={<News/>} />
