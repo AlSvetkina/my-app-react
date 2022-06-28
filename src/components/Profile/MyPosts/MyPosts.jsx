@@ -3,11 +3,7 @@ import classes from './MyPosts.module.css';
 import Post from './Post/Post';
 
 const MyPosts = (props) => {
-
-    let postData = [
-        {id: '1', message: 'Hi, how are you?', likeCount: '12'}, 
-        {id: '2', message: 'It is my first post', likeCount: '15'} 
-    ]
+    let postsElements = props.postsData.map( post => <Post message={post.message} likeCount={post.likeCount} />);
 
     return (
         <div className={classes.postBlock}>
@@ -21,9 +17,7 @@ const MyPosts = (props) => {
                 </div>
             </div>
             <div className={classes.posts}>
-                <Post message={postData[0].message} likeCount={postData[0].likeCount}/>
-                <Post message={postData[1].message} likeCount={postData[1].likeCount}/>
-                {/* вызываем функцию дважды с атрибутом message и благодаря props из Post.jsx данные подставляются в функцию */}
+                { postsElements }
             </div>
         </div>
     );
